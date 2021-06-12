@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+body{
+    background-color: #d6b2b2;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'montserrat', sans-serif;
+}
+.brand h1{
+    letter-spacing: 0.3rem;
+    z-index: 100;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: left;
+    align-items: flex-start;
+}
+.brand h1 span{
+    color:crimson;
+    text-shadow: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+p{
+color: black;
+    text-align: left;
+    font: 1.4rem;
+    line-height: 1.9rem;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+ .section-title{
+    font-size: 4rem;
+    font-weight: 2;
+    color:black;
+    text-shadow: 2px 2px 7px crimson;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+ 
+#projects .projects{
+    flex-direction: column;
+    max-width: 1500px;
+    margin-top: 0 auto;
+    padding: 100px 0;
+
+}
+#projects .projects-header h1{
+    margin-bottom: 50px;
+}
+#projects .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    background-image: linear-gradient(91deg, #da031ee3 0%, #444040 100%);
+    height: 300px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+#projects .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500; 
+    margin-top: 10px;  
+}
+#projects .project-info p{
+    color: white;
+    text-align: left;
+}
+#projects .project-img{
+    border:5px  rgb(20, 20, 20);
+    size: 100px;
+    flex-basis: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#projects .project-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-image-outset: rgb(20, 20, 20) 5px 20px;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.4;
+}#projects .project-img img{
+    transition: 0.5s ease transform;
+}
+#projects .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+.projects a{
+    font-size: 25px;
+    font-weight: 600;
+    display: inline-block;
+    background: none;
+    color: rgb(3, 3, 3);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(248, 0, 0);
+    transition: all 0.3s ease;
+}
+.projects a:hover{
+    color: crimson;
+    background: black;
+}
+@media only screen and (min-width:760px){
+    
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title{
+        font-size: 6rem;
+    }
+    
+    #projects .project-item{
+        flex-direction: row;
+    }
+    #projects .project-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    #projects .project-item{
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #projects .all-projects .project-info{
+        height: 100%;
+    }
+    #projects .all-projects .project-img{
+        height: 100%;
+    }
+    
+}
+
+@media only screen and (min-width:1200px){
+   
+    #projects .all-projects{
+        margin-left: 120px;
+        margin-right: 100px;
+    }
+    
+}
